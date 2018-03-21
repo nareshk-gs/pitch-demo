@@ -62,7 +62,7 @@ a jar and a bunch of JSONs
 
 #VSLIDE
 
-## Mapping - example
+## Simulating Faults - example
 
 ```
 {
