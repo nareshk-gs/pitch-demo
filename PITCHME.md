@@ -1,6 +1,7 @@
 #HSLIDE
 WIREMOCK -More than just a Stub
-[Press Down Key](assets/wiremock_logo.jpeg)
+
+![Press Down Key](assets/wiremock-logo.png)
 #HSLIDE
 
 ##What is WIRE MOCK?
