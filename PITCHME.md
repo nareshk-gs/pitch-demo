@@ -6,10 +6,9 @@ WIREMOCK -More than just a Stub
 
 ## What is WIRE MOCK?
 
-
 ### Advanced HTTP API simulator
 
-#HSLIDE
+#VSLIDE
 
 ## How WIRE MOCK?
 
@@ -19,3 +18,32 @@ WIREMOCK -More than just a Stub
 #### Not java (?)
 
 a jar and a bunch of JSONs
+
+#HSLIDE
+
+## Mapping
+
+#### request-response pair
+
+#VSLIDE
+
+## Mapping - example
+
+```
+{
+  "priority": 1,
+  "request" : {
+    "urlPattern" : "/APITest/",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 200,
+    "jsonBody" : {
+        "status" : "success",
+    },
+    "headers" : {
+      "Content-Type": "application/json"
+    }
+  }
+}
+```
