@@ -12,11 +12,11 @@ WIREMOCK -More than just a Stub
 
 ## How WIRE MOCK?
 
-- Not Gradle
+- Not Gradle     |
 - Not Spring     |
 - Not javascript |
 - Not java (?)   |
-- a jar and a bunch of JSONs |
+- But a jar and a bunch of JSONs |
 
 #HSLIDE
 
