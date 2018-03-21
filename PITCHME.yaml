@@ -1,0 +1,6 @@
+theme : sky
+logo : assets/wiremock-logo.png
+logo-position : top-right
+transition : none
+highlight : json
+transition : fade
