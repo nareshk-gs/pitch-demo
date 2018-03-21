@@ -1,5 +1,6 @@
 #HSLIDE
-## WIREMOCK -More than just a Stub
+## WIREMOCK 
+### More than just a Stub
 
 ![Press Down Key](assets/wiremock-logo.png)
 #HSLIDE
