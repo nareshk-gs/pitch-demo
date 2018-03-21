@@ -54,3 +54,47 @@ a jar and a bunch of JSONs
 @[8]
 @[9-11]
 @[12-14]
+
+#HSLIDE
+
+## Simulating Faults / Edge Cases
+
+
+#VSLIDE
+
+## Mapping - example
+
+```
+{
+  "priority": 1,
+  "request" : {
+    "urlPattern" : "/click-list-master-order/draft-order/(.*)/getByProfileId",
+    "method" : "GET",
+    "headers": {
+      "X-Correlation-Id": {
+        "equalTo": "getdraftorder_byprofile_404"
+      }
+    }
+  },
+  "response" : {
+    "status" : 404,
+    "jsonBody" : {
+      "transactionId": "80e2a2cb-8eb0-4e55-9286-e74945442cf8",
+      "correlationId": "2e303fbe-f307-4e6d-b213-9801fee2cc0e",
+      "httpStatus": 404,
+      "appErrorCode": "DraftOrderNotFound",
+      "detail": {
+        "errors": [
+          "Draft Order not found"
+        ],
+        "context": {}
+      }
+    }
+  }
+}
+```
+
+@[3-11]
+@[12-26]
+@[13]
+@[14-24]
