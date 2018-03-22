@@ -98,3 +98,49 @@
 @[12-26]
 @[13]
 @[14-24]
+
+#HSLIDE
+
+## Proxying
+
+
+#VSLIDE
+
+## Proxying - example
+
+```
+{
+  "priority": 2000,
+  "request" : {
+    "urlPattern" : "/click-list-master-order/(.*)"
+  },
+  "response" : {
+    "proxyBaseUrl" : "https://dc1-stage.kroger.com"
+  }
+}
+```
+
+@[7]
+
+#HSLIDE
+
+## Proxying
+
+
+#VSLIDE
+
+## Proxying - example
+
+```
+{
+  "priority": 2000,
+  "request" : {
+    "urlPattern" : "/click-list-master-order/(.*)"
+  },
+  "response" : {
+    "proxyBaseUrl" : "https://dc1-stage.kroger.com"
+  }
+}
+```
+
+@[7] (base URL for Master Order)
