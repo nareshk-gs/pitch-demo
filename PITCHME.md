@@ -11,13 +11,35 @@
 
 #VSLIDE
 
+## Why WIRE MOCK?
+
+- Test Faults |
+- Test unreproducible cases |
+- 3rd party limitaions |
+- Reliable / Faster |
+- Intercept messages |
+
+#VSLIDE
+
 ## How WIRE MOCK?
 
-- Not Gradle     |
-- Not Spring     |
-- Not javascript |
-- Not java (?)   |
-- But a jar and a bunch of JSONs |
+- Just a jar and a bunch of JSONs |
+- java -jar wiremock-standalone-2.6.0.jar |
+- Thats it! (No Gradle, No Maven, No artifactory, No coding, No problem!) |
+
+#HSLIDE
+
+## Recording
+
+#VSLIDE
+
+## Recoding
+
+```
+java -jar wiremock-standalone-2.6.0.jar --proxy-all https://ecsb.kroger.com  --record-mappings
+```
+
+![WiremockRecordings](assets/WireMock_Recording.png)
 
 #HSLIDE
 
