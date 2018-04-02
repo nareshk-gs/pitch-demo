@@ -556,9 +556,7 @@ https://mockcheckout-test.cfcdcinternaltest.kroger.com/__admin/requests/find
 ```
 
 @[28] (Enable templating)
-@[21] (Take the suborder from request URL and send in response. 
-
-/click-list-master-order/sub-order/1180645484990963501)
+@[21] (Take the suborder from request URL and send in response. ```/click-list-master-order/sub-order/1180645484990963501```)
 
 
 #HSLIDE
