@@ -614,7 +614,7 @@ DELETE https://mockcheckout-test.cfcdcinternaltest.kroger.com/__admin/mappings/3
 
 ## Admin APIs
 
-#HSLIDE
+#VSLIDE
 
 ## Admin APIs
 
@@ -627,18 +627,17 @@ DELETE https://mockcheckout-test.cfcdcinternaltest.kroger.com/__admin/mappings/3
 
 ## Chrome Extension
 
-#HSLIDE
+#VSLIDE
 
-### Chrome Extension - Configure Server 
+#### Chrome Extension - Configure Server 
 
 <img src="assets/WireMockPostman_Setting.png" width="50%">
 
-#HSLIDE
+#VSLIDE
 
-### Chrome Extension - Edit Mappings
+#### Chrome Extension - Edit Mappings
 
-<img src="assets/WireMockPostman_Edit.png" width="40%">
-
+<img src="assets/WireMockPostman_Edit.png" width="50%">
 
 #HSLIDE
 
