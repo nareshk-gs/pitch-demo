@@ -37,7 +37,7 @@
 
 ```
 java -jar wiremock-standalone-2.6.0.jar 
-        --proxy-all https://ecsb.kroger.com  
+        --proxy-all https://ecsb-test.kroger.com  
         --record-mappings
 ```
 
@@ -118,6 +118,51 @@ java -jar wiremock-standalone-2.6.0.jar
 ```
 
 @[14-24] (Response JSON Body - Sending a different price)
+
+#VSLIDE
+
+#### Kroger third party examples 
+
+- Vantiv :: Add new credit card type |
+- Accertify :: Simulate all business rules that are not supported |
+
+#VSLIDE
+
+## Simulating Faults
+
+```
+{
+  "priority": 1,
+  "request" : {
+    "urlPattern" : "/click-list-master-order/draft-order/(.*)/getByProfileId",
+    "method" : "GET",
+    "headers": {
+      "X-Correlation-Id": {
+        "equalTo": "getdraftorder_byprofile_404"
+      }
+    }
+  },
+  "response" : {
+    "status" : 404,
+    "jsonBody" : {
+      "transactionId": "80e2a2cb-8eb0-4e55-9286-e74945442cf8",
+      "correlationId": "2e303fbe-f307-4e6d-b213-9801fee2cc0e",
+      "httpStatus": 404,
+      "appErrorCode": "DraftOrderNotFound",
+      "detail": {
+        "errors": [
+          "Draft Order not found"
+        ],
+        "context": {}
+      }
+    }
+  }
+}
+```
+
+@[12-26] (Response)
+@[13] (Response HTTP Status Code)
+@[14-24] (Response JSON Body)
 
 #VSLIDE
 
@@ -216,11 +261,11 @@ java -jar wiremock-standalone-2.6.0.jar
 ```
 
 @[21-28] (Response Headers)
-@[23] (Response Header - Send content type as XML instead of JSON)
+@[22] (Response Header - Send content type as XML instead of JSON)
 
 #VSLIDE
 
-#### Hard to Setup Data
+## Hard to Setup Data
 
 - Item with no price |
 - Item that always has promo price |
@@ -235,52 +280,7 @@ java -jar wiremock-standalone-2.6.0.jar
 - Availability |
 - Access Restrictions |
 
-- Vantiv :: Add new credit card type |
-- Accertify :: Simulate all business rules that are not supported |
 
-#HSLIDE
-
-## Simulating Faults / Edge Cases
-
-
-#VSLIDE
-
-## Simulating Faults
-
-```
-{
-  "priority": 1,
-  "request" : {
-    "urlPattern" : "/click-list-master-order/draft-order/(.*)/getByProfileId",
-    "method" : "GET",
-    "headers": {
-      "X-Correlation-Id": {
-        "equalTo": "getdraftorder_byprofile_404"
-      }
-    }
-  },
-  "response" : {
-    "status" : 404,
-    "jsonBody" : {
-      "transactionId": "80e2a2cb-8eb0-4e55-9286-e74945442cf8",
-      "correlationId": "2e303fbe-f307-4e6d-b213-9801fee2cc0e",
-      "httpStatus": 404,
-      "appErrorCode": "DraftOrderNotFound",
-      "detail": {
-        "errors": [
-          "Draft Order not found"
-        ],
-        "context": {}
-      }
-    }
-  }
-}
-```
-
-@[3-11] (Request pattern match)
-@[12-26] (Response)
-@[13] (Response HTTP Status Code)
-@[14-24] (Response JSON Body)
 
 #HSLIDE
 
@@ -308,7 +308,6 @@ java -jar wiremock-standalone-2.6.0.jar
 #HSLIDE
 
 ## Timeouts
-
 
 #VSLIDE
 
