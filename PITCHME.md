@@ -18,12 +18,14 @@
 
 #VSLIDE
 
-### of course - the SOA tester
+#### of course - the SOA tester
 
-- "kIsSmEyErbArReLReSeRvEDaRksIdEOftHemOoNImPeRiAlpOrTeR"
-- "Kissmeyer barrel reserve dark side of the moon imperial porter"
+```
+"kIsSmEyErbArReLReSeRvEDaRksIdEOftHemOoNImPeRiAlpOrTeR"
+"Kissmeyer barrel reserve dark side of the moon imperial porter"
+```
 
-![WireMock](assets/beer.jpg)
+<img src="assets/beer.jpg" width="30%">
 
 #HSLIDE
 
