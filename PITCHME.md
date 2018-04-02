@@ -435,9 +435,77 @@ java -jar wiremock-standalone-2.6.0.jar
 
 #VSLIDE
 
-###Logging / Debugging
+### Logging / Debugging
 
 ![WireMockDebugging](assets/WireMock_Logging_Debugging.png)
+
+#VSLIDE
+
+#### Logging / Debugging - Sample (Wallet Auth)
+
+```
+https://mockcheckout-test.cfcdcinternaltest.kroger.com/__admin/requests/find
+```
+
+```
+{
+    "url" : "/onlinepayments/order/auth/pay_924233"
+}
+```
+
+#VSLIDE
+
+#### Logging / Debugging - Sample (Wallet Auth)
+
+```
+{
+    "requests": [
+        {
+            "url": "/onlinepayments/order/auth/pay_924233",
+            "absoluteUrl": "http://mockcheckout-test.cfcdcinternaltest.kroger.com/onlinepayments/order/auth/pay_924233",
+            "method": "POST",
+            "clientIp": "10.9.87.55, 10.9.87.55",
+            "headers": {
+                "Cookie": "aid=CB92EDDEAF51043E3B1983ECCF3142430784A944704F29E312EA5480DEC77D57A73DDD8A7224167AF1AC58A3A70EBE284D8B3AB444D2DC3DD244867740D4767B; aid_2=1522185913925|6405ae66-cd57-4886-bdad-e5e0fc34d947; loggedIn=yes; sid=6405ae66-cd57-4886-bdad-e5e0fc34d947; TS01572b6e=014d3549aee23e1cc5cb8f609a15af37a2f5ec4aafa20c0c8af9dc43af730335f1b1c4612ff96a8236a65ad809a9316943e6dcb0e757e19f1144e7df6f13d8f5b8726a2daa323049844c23ada13fa162e0a2118aee; TS0190491f=014d3549ae9de5f437bbdae4a037724a1be6c4c28fa20c0c8af9dc43af730335f1b1c4612faadcea6162718ad7a5217c435bef167504a061e68b6e51b92642b3c12cf340a8c743a251ab6346a177af7f42afd6003c045b80e476296574d67cae6120ad6edf9ea168acda4a1360041666fbe5675ae088e05c2624aaefaf765e724e601cae98; dtCookie=1$32D4A5691D17A24C58615A59D9817FC0|Banner|1|_default|1|RUM+Default+Application|1",
+                "X-Cf-Instanceid": "634629cf-7e46-43a1-53c1-5a45",
+                "Accept": "*/*",
+                "X-Correlation-Id": "try again",
+                "User-Agent": "PostmanRuntime/7.1.1",
+                "X-Forwarded-Proto": "https",
+                "Connection": "close",
+                "X-Request-Start": "1522690601842",
+                "Host": "mockcheckout-test.cfcdcinternaltest.kroger.com",
+                "Accept-Encoding": "gzip, deflate",
+                "X-Vcap-Request-Id": "999b8af8-9b4d-427f-7882-9116b0564a89",
+                "Authorization": "Basic U1ZDQ05DUEFZT1JERVJEOjBuMnNqVXY0WGdKNENMakg4d0hTV2c=",
+                "X-Cf-Instanceindex": "0",
+                "X-B3-Spanid": "13319500551d0ed2",
+                "X-Cf-Applicationid": "3de25567-8231-40f2-8c40-be3cb6204eac",
+                "X-Forwarded-For": "10.9.87.55, 10.9.87.55",
+                "X-B3-Traceid": "13319500551d0ed2",
+                "Content-Length": "201",
+                "Content-Type": "application/json"
+            },
+            "cookies": {
+                "aid": "CB92EDDEAF51043E3B1983ECCF3142430784A944704F29E312EA5480DEC77D57A73DDD8A7224167AF1AC58A3A70EBE284D8B3AB444D2DC3DD244867740D4767B",
+                "aid_2": "1522185913925|6405ae66-cd57-4886-bdad-e5e0fc34d947",
+                "loggedIn": "yes",
+                "sid": "6405ae66-cd57-4886-bdad-e5e0fc34d947",
+                "TS01572b6e": "014d3549aee23e1cc5cb8f609a15af37a2f5ec4aafa20c0c8af9dc43af730335f1b1c4612ff96a8236a65ad809a9316943e6dcb0e757e19f1144e7df6f13d8f5b8726a2daa323049844c23ada13fa162e0a2118aee",
+                "TS0190491f": "014d3549ae9de5f437bbdae4a037724a1be6c4c28fa20c0c8af9dc43af730335f1b1c4612faadcea6162718ad7a5217c435bef167504a061e68b6e51b92642b3c12cf340a8c743a251ab6346a177af7f42afd6003c045b80e476296574d67cae6120ad6edf9ea168acda4a1360041666fbe5675ae088e05c2624aaefaf765e724e601cae98",
+                "dtCookie": "1$32D4A5691D17A24C58615A59D9817FC0|Banner|1|_default|1|RUM+Default+Application|1"
+            },
+            "browserProxyRequest": false,
+            "loggedDate": 1522690601848,
+            "bodyAsBase64": "ew0KCSJhcHBOYW1lIjogIkNsaWNrTGlzdCIsDQoJImFjY291bnROdW1iZXIiOiAiMTdiODRjNzUtMTQ2MC1jODMzLWFmYjktZWNmYWY5ZmEyZTI2IiwNCgkiYXV0aFR5cGUiOiAicmVhbFRpbWVBdXRoIiwNCgkiYW1vdW50IjogMTAwLjAwLA0KCSJwYXltZW50TWV0aG9kSWQiOiAiMjg0Njg1MCIsDQoJInBpY2t1cFN0b3JlSWQiOiAiMDE0MDAzODMiDQp9",
+            "body": "{\r\n\t\"appName\": \"ClickList\",\r\n\t\"accountNumber\": \"17b84c75-1460-c833-afb9-ecfaf9fa2e26\",\r\n\t\"authType\": \"realTimeAuth\",\r\n\t\"amount\": 100.00,\r\n\t\"paymentMethodId\": \"2846850\",\r\n\t\"pickupStoreId\": \"01400383\"\r\n}",
+            "loggedDateString": "2018-04-02T17:36:41Z",
+            "queryParams": {}
+        }
+    ],
+    "requestJournalDisabled": false
+}
+```
 
 #HSLIDE
 
