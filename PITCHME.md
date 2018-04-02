@@ -20,12 +20,12 @@
 
 #### of course - the SOA tester
 
-```
+```json
 "kIsSmEyErbArReLReSeRvEDaRksIdEOftHemOoNImPeRiAlpOrTeR"
 "Kissmeyer barrel reserve dark side of the moon imperial porter"
 ```
 
-<img src="assets/beer.jpg" width="30%">
+<img src="assets/beer.jpg" width="10%">
 
 #HSLIDE
 
