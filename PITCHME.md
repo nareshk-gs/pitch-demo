@@ -612,6 +612,35 @@ DELETE https://mockcheckout-test.cfcdcinternaltest.kroger.com/__admin/mappings/3
 
 #HSLIDE
 
+## Admin APIs
+
+#HSLIDE
+
+## Admin APIs
+
+- Add / Update / Remove Mappings |
+- Get the request / response flowing through WireMock |
+- Reset scenario of stateful Stub |
+- Many more ... |
+
+#HSLIDE
+
+## Chrome Extension
+
+#HSLIDE
+
+### Chrome Extension - Configure Server 
+
+![WireMockPostmanSettings](assets/WireMockPostman_Setting.png)
+
+#HSLIDE
+
+### Chrome Extension - Edit Mappings
+
+![WireMockPostmanEdit](assets/WireMockPostman_Edit.png)
+
+#HSLIDE
+
 ## Questions?
 
 #HSLIDE
