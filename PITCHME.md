@@ -55,7 +55,7 @@ java -jar wiremock-standalone-2.6.0.jar
 
 ## Mapping - example
 
-```
+```json
 {
   "priority": 1,
   "request" : {
@@ -90,7 +90,7 @@ java -jar wiremock-standalone-2.6.0.jar
 
 #### Response with specific data
 
-```
+```json
 {
   "priority": 1,
   "request" : {
@@ -125,7 +125,7 @@ java -jar wiremock-standalone-2.6.0.jar
 
 ## Simulating Faults
 
-```
+```json
 {
   "priority": 1,
   "request" : {
@@ -163,7 +163,7 @@ java -jar wiremock-standalone-2.6.0.jar
 
 #### Response with partial data
 
-```
+```json
 {
   "priority": 1,
   "request" : {
@@ -193,7 +193,7 @@ java -jar wiremock-standalone-2.6.0.jar
 
 #### Response Headers
 
-```
+```json
 {
   "priority": 1,
   "request" : {
@@ -267,7 +267,7 @@ java -jar wiremock-standalone-2.6.0.jar
 
 ## Proxying - example
 
-```
+```json
 {
   "priority": 10,
   "request" : {
@@ -296,7 +296,7 @@ java -jar wiremock-standalone-2.6.0.jar
 
 ## Timeout - example
 
-```
+```json
 {
   "priority": 1,
   "request" : {
@@ -337,7 +337,7 @@ java -jar wiremock-standalone-2.6.0.jar
 
 ### Timeout and Proxy  - example
 
-```
+```json
 {
   "priority": 1,
   "request" : {
@@ -381,7 +381,7 @@ java -jar wiremock-standalone-2.6.0.jar
 
 #### Stateful Mocking - State 1 - Promo
 
-```
+```json
 {
   "scenarioName": "PriceDecrease",
   "requiredScenarioState": "Promo",
@@ -407,7 +407,7 @@ java -jar wiremock-standalone-2.6.0.jar
 
 #### Stateful Mocking - State 2 - Regular
 
-```
+```json
 {
   "scenarioName": "PriceDecrease",
   "requiredScenarioState": "Regular",
@@ -447,13 +447,13 @@ java -jar wiremock-standalone-2.6.0.jar
 https://mockcheckout-test.cfcdcinternaltest.kroger.com/__admin/requests/find
 ```
 
-```
+```json
 {
     "url" : "/onlinepayments/order/auth/pay_924233"
 }
 ```
 
-```
+```json
 {
     "requests": [
         {
@@ -566,6 +566,16 @@ https://mockcheckout-test.cfcdcinternaltest.kroger.com/__admin/requests/find
 
 ## Dynamic Mocking
 
+- Fail a particular Master Order Fulfil |
+- Order number is unknown until the order is created |
+- Dynamically add mapping, as part of the script |
+- Remove the mapping at end of the script |
+
+#VSLIDE
+
+## Dynamic Mocking
+
+![Dynamic Mapping](assets/TestScript_DynamicMapping.png)
 
 #HSLIDE
 
