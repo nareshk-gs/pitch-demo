@@ -79,12 +79,56 @@ java -jar wiremock-standalone-2.6.0.jar --proxy-all https://ecsb.kroger.com  --r
 
 #HSLIDE
 
+## Simulating Test Data
+
+
+#VSLIDE
+
+## Response with specific data
+
+```
+{
+  "priority": 1,
+  "request" : {
+    "urlPattern" : "/click-list-adjustment/adjustment",
+    "method" : "POST",
+    "headers": {
+      "X-Correlation-Id": {
+        "equalTo": "cladj_differentfee"
+      }
+    }
+  },
+  "response" : {
+    "status" : 200,
+    "jsonBody" : {
+      "fee": {
+        "fulfillment": "CurbSide",
+        "banner": "kroger",
+        "division": "014",
+        "store": "00383",
+        "price": 5.00,
+        "plu": "223",
+        "itemDesc": "Service Fee PLU - CurbSide"
+      }
+    }
+   }
+}
+```
+
+@[3-11] (Request pattern match)
+@[12-26] (Response)
+@[13] (Response HTTP Status Code)
+@[14-25] (Response JSON Body - Sending a different price)
+
+
+#HSLIDE
+
 ## Simulating Faults / Edge Cases
 
 
 #VSLIDE
 
-## Simulating Faults - example
+## Simulating Faults
 
 ```
 {
