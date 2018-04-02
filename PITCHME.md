@@ -255,7 +255,7 @@ java -jar wiremock-standalone-2.6.0.jar
 }
 ```
 
-@[19-27] (Response Headers)
+@[20-27] (Response Headers)
 @[22] (Response Header - Send content type as XML instead of JSON)
 
 #VSLIDE
@@ -285,8 +285,13 @@ java -jar wiremock-standalone-2.6.0.jar
 
 #HSLIDE
 
-## Proxying
+## Selective Mocking / Proxying
 
+#VSLIDE
+
+## Selective Mocking / Proxying
+
+![WiremockProxying](assets/WireMock_Proxying.pngg)
 
 #VSLIDE
 
@@ -339,5 +344,4 @@ java -jar wiremock-standalone-2.6.0.jar
 }
 ```
 
-@[3-11] (base URL for Master Order)
 @[13] (Delay 5 secs before sending response)
