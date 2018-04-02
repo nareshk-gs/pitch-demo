@@ -289,7 +289,7 @@ java -jar wiremock-standalone-2.6.0.jar
 
 #VSLIDE
 
-## Selective Mocking / Proxying
+### Selective Mocking / Proxying
 
 ![WiremockProxying](assets/WireMock_Proxying.png)
 
@@ -299,7 +299,7 @@ java -jar wiremock-standalone-2.6.0.jar
 
 ```
 {
-  "priority": 2000,
+  "priority": 10,
   "request" : {
     "urlPattern" : "/click-list-master-order/(.*)"
   },
@@ -310,6 +310,7 @@ java -jar wiremock-standalone-2.6.0.jar
 ```
 
 @[7] (base URL for Master Order)
+@[2] (Higher Priority)
 
 #HSLIDE
 
