@@ -191,36 +191,6 @@ java -jar wiremock-standalone-2.6.0.jar
 
 #VSLIDE
 
-#### Invalid Responses
-
-```
-{
-  "priority": 1,
-  "request" : {
-    "urlPattern" : "/click-list-adjustment/adjustment",
-    "method" : "POST",
-    "headers": {
-      "X-Correlation-Id": {
-        "equalTo": "cladj_differentfee"
-      }
-    }
-  },
-  "response" : {
-    "status" : 200,
-    "jsonBody" : {
-      "fee": {
-        "fulfillment": CurbSide,
-        "price": 5.00
-      }
-    }
-   }
-}
-```
-
-@[14-19] (Response JSON Body - Sending a invalid JSON)
-
-#VSLIDE
-
 #### Response Headers
 
 ```
@@ -423,7 +393,7 @@ java -jar wiremock-standalone-2.6.0.jar
   },
   "response" : {
     "status" : 200,
-    "bodyFileName" : "ItemDiscovery_ApplePromo.json"
+    "bodyFileName" : "ItemDiscovery_Apple(Promo).json"
     }
 }
 ```
@@ -435,7 +405,7 @@ java -jar wiremock-standalone-2.6.0.jar
 
 #VSLIDE
 
-#### Stateful Mocking - State 1 - Promo
+#### Stateful Mocking - State 2 - Regular
 
 ```
 {
@@ -449,7 +419,7 @@ java -jar wiremock-standalone-2.6.0.jar
   },
   "response" : {
     "status" : 200,
-    "bodyFileName" : "ItemDiscovery_AppleRegular.json"
+    "bodyFileName" : "ItemDiscovery_Apple(Regular).json"
     }
 }
 ```
@@ -458,6 +428,16 @@ java -jar wiremock-standalone-2.6.0.jar
 @[4] (Next State)
 @[6-9] (Same Request Pattern Match)
 @[12] (Response File - to send Regular price)
+
+#HSLIDE
+
+## Logging / Debugging
+
+#VSLIDE
+
+###Logging / Debugging
+
+![WireMockDebugging](assets/WireMock_Logging_Debugging.png)
 
 #HSLIDE
 
