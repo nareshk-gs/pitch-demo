@@ -522,7 +522,7 @@ https://mockcheckout-test.cfcdcinternaltest.kroger.com/__admin/requests/find
 
 ### RESPONSE Templating
 
-```
+```json
 {
   "priority": 1,
   "request" : {
@@ -557,6 +557,14 @@ https://mockcheckout-test.cfcdcinternaltest.kroger.com/__admin/requests/find
 
 @[28] (Enable templating)
 @[21] (Get suborder from URL ```/click-list-master-order/sub-order/1180645484990963501```)
+
+#HSLIDE
+
+## Dynamic Mocking
+
+#VSLIDE
+
+## Dynamic Mocking
 
 
 #HSLIDE
