@@ -581,32 +581,32 @@ https://mockcheckout-test.cfcdcinternaltest.kroger.com/__admin/requests/find
 
 ## Dynamic Mocking
 
-#### Admin API - Add Mapping
+- Admin API - Add Mapping
 
 ```
 POST https://mockcheckout-test.cfcdcinternaltest.kroger.com/__admin/mappings
 ```
 
-#### Send the same mapping file as input.
-#### The response contains a unique ID to identify the mapping.
+- Send the same mapping file as input.
+- The response contains a unique ID to identify the mapping.
 ```json
 "id": "68c47560-164a-4099-af1e-5fc12f2cc815"
 ```
 
-#### WireMock starts using the mapping instantly
+- WireMock starts using the mapping instantly
 
 #VSLIDE
 
 ## Dynamic Mocking
 
-#### Admin API - Remove Mapping
+- Admin API - Remove Mapping
 
 ```
 DELETE https://mockcheckout-test.cfcdcinternaltest.kroger.com/__admin/mappings/37416e0c-76fc-4d39-b98a-df1d47de5cc6
 ```
 
-#### Send the mapping id in the URL
-#### WireMock instantly removes the mapping.
+- Send the mapping id in the URL
+- WireMock instantly removes the mapping.
 
 #HSLIDE
 
