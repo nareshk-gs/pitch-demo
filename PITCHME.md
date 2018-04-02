@@ -277,7 +277,7 @@ java -jar wiremock-standalone-2.6.0.jar
 
 #VSLIDE
 
-## Kroger third party limitations - examples 
+### Kroger third party limitations - examples 
 
 - Vantiv :: Add new credit card type |
 - Accertify :: Simulate all business rules that are not supported |
@@ -291,7 +291,7 @@ java -jar wiremock-standalone-2.6.0.jar
 
 ## Selective Mocking / Proxying
 
-![WiremockProxying](assets/WireMock_Proxying.pngg)
+![WiremockProxying](assets/WireMock_Proxying.png)
 
 #VSLIDE
 
