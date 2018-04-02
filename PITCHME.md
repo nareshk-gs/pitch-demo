@@ -14,7 +14,7 @@
 - Performance tester orders 999999 beers |
 - Manual tester orders -1 beer |
 - Automation tester orders a crocodile | 
-- SOA Tester orders beer with name "kIsSmEyErbArReLReSeRvEDaRksIdEOftHemOoNImPeRiAlpOrTeR" |
+- SOA Tester orders beer with name ```"kIsSmEyErbArReLReSeRvEDaRksIdEOftHemOoNImPeRiAlpOrTeR"``` |
 
 #VSLIDE
 
@@ -25,7 +25,7 @@
 "Kissmeyer barrel reserve dark side of the moon imperial porter"
 ```
 
-<img src="assets/beer.jpg" width="10%">
+<img src="assets/beer.jpg" width="20%">
 
 #HSLIDE
 
