@@ -391,25 +391,25 @@ java -jar wiremock-standalone-2.6.0.jar
 
 #HSLIDE
 
-##Stateful Mocking
+## Stateful Mocking
 
 #VSLIDE
 
-####Stateful Mocking - 2 different price for same product
+#### Stateful Mocking - 2 different price for same product
 - Product price change during checkout
 
 ![ItemPriceChange](assets/ItemPriceChange_Scenario.png)
 
 #VSLIDE
 
-####Stateful Mocking - 2 different price for same product
+#### Stateful Mocking - 2 different price for same product
 - Product price change during checkout
 
 ![ItemPriceChange](assets/WireMockStateSample.png)
 
 #VSLIDE
 
-####Stateful Mocking - State 1 - Promo
+#### Stateful Mocking - State 1 - Promo
 
 ```
 {
@@ -435,7 +435,7 @@ java -jar wiremock-standalone-2.6.0.jar
 
 #VSLIDE
 
-####Stateful Mocking - State 1 - Promo
+#### Stateful Mocking - State 1 - Promo
 
 ```
 {
