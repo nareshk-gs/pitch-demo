@@ -391,6 +391,76 @@ java -jar wiremock-standalone-2.6.0.jar
 
 #HSLIDE
 
+##Stateful Mocking
+
+#VSLIDE
+
+####Stateful Mocking - 2 different price for same product
+- Product price change during checkout
+
+![ItemPriceChange](assets/ItemPriceChange_Scenario.png)
+
+#VSLIDE
+
+####Stateful Mocking - 2 different price for same product
+- Product price change during checkout
+
+![ItemPriceChange](assets/WireMockStateSample.png)
+
+#VSLIDE
+
+####Stateful Mocking - State 1 - Promo
+
+```
+{
+  "scenarioName": "PriceDecrease",
+  "requiredScenarioState": "Promo",
+  "newScenarioState": "Regular",
+  "priority": 1,
+  "request" : {
+    "url" : "/item-discovery/items?div=035&store=00577&upcs=0007447100050",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 200,
+    "bodyFileName" : "ItemDiscovery_ApplePromo.json"
+    }
+}
+```
+@[2] (Scenario Name)
+@[3] (Current State)
+@[4] (Next State)
+@[6-9] (Request Pattern Match)
+@[12] (Response File - to send promo price)
+
+#VSLIDE
+
+####Stateful Mocking - State 1 - Promo
+
+```
+{
+  "scenarioName": "PriceDecrease",
+  "requiredScenarioState": "Regular",
+  "newScenarioState": "Promo",
+  "priority": 1,
+  "request" : {
+    "url" : "/item-discovery/items?div=035&store=00577&upcs=0007447100050",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 200,
+    "bodyFileName" : "ItemDiscovery_AppleRegular.json"
+    }
+}
+```
+@[2] (Same Scenario Name)
+@[3] (Current State)
+@[4] (Next State)
+@[6-9] (Same Request Pattern Match)
+@[12] (Response File - to send Regular price)
+
+#HSLIDE
+
 ## THANKS!
 ![WireMock](assets/wiremock-logo.png)
 #### http://wiremock.org/
