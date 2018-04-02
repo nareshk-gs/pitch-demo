@@ -13,8 +13,8 @@
 - Functional tester orders 0 beer |
 - Performance tester orders 999999 beers |
 - Manual tester orders -1 beer |
-- Automation tester orders a crocodile | 
-<font size=6> - SOA Tester orders beer with name "kIsSmEyErbArReLReSeRvEDaRksIdEOftHemOoNImPeRiAlpOrTeR"</font> |
+- Automation tester orders a crocodile <font size=6>| 
+- SOA Tester orders beer with name "kIsSmEyErbArReLReSeRvEDaRksIdEOftHemOoNImPeRiAlpOrTeR"</font> |
 
 #VSLIDE
 
