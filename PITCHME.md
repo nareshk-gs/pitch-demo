@@ -653,6 +653,24 @@ DELETE https://mockcheckout-test.cfcdcinternaltest.kroger.com/__admin/mappings/3
 
 #HSLIDE
 
+## WireMock in Digital
+
+#VSLIDE
+
+## WireMock in Digital
+#### Checkout Web
+
+![WireMockCheckout](assets/Checkout-Mock.png)
+
+#VSLIDE
+
+## WireMock in Digital
+#### Checkout Mobile
+
+![WireMockMobileCheckout](assets/MSL_WireMock.png)
+
+#HSLIDE
+
 ## Questions?
 ![WireMock](assets/Questions.png)
 
