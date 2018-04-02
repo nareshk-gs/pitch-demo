@@ -14,7 +14,7 @@
 - Performance tester orders 999999 beers |
 - Manual tester orders -1 beer |
 - Automation tester orders a crocodile | 
-- SOA Tester orders beer with name ```"kIsSmEyErbArReLReSeRvEDaRksIdEOftHemOoNImPeRiAlpOrTeR"``` |
+- SOA Tester orders beer with name <font size=6>"kIsSmEyErbArReLReSeRvEDaRksIdEOftHemOoNImPeRiAlpOrTeR" |
 
 #VSLIDE
 
