@@ -2,6 +2,8 @@
 ## WIREMOCK 
 ### More than just a Stub
 
+#### Arun, Kalesh, Naresh.
+
 ![WireMock](assets/wiremock-logo.png)
 #HSLIDE
 
@@ -609,6 +611,10 @@ DELETE https://mockcheckout-test.cfcdcinternaltest.kroger.com/__admin/mappings/3
 
 #HSLIDE
 
+## Questions?
+
+#HSLIDE
+          
 ## THANKS!
 ![WireMock](assets/wiremock-logo.png)
 #### http://wiremock.org/
