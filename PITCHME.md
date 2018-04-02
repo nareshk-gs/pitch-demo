@@ -432,6 +432,14 @@ java -jar wiremock-standalone-2.6.0.jar
 @[6-9] (Same Request Pattern Match)
 @[12] (Response File - to send Regular price)
 
+#VSLIDE
+
+### Stateful Mocking - Other examples
+
+- Service internal retry scenarios |
+- Order status for an order management system |
+- Change in coupon status within a order flow |
+
 #HSLIDE
 
 ## Logging / Debugging
