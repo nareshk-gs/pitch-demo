@@ -643,12 +643,12 @@ DELETE https://mockcheckout-test.cfcdcinternaltest.kroger.com/__admin/mappings/3
 
 #### Chrome Extension - Edit Mappings
 
-<img src="assets/WireMockPostman_EditMapping.png" width="50%">
+<img src="assets/WireMockPostman_EditMapping.png" width="40%">
 
 #HSLIDE
 
 ## Questions?
-![WireMock](assets/Questionss.png)
+![WireMock](assets/Questions.png)
 
 #HSLIDE
           
