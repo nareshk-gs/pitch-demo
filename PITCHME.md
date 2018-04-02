@@ -65,7 +65,7 @@ java -jar wiremock-standalone-2.6.0.jar
   "response" : {
     "status" : 200,
     "jsonBody" : {
-        "status" : "success",
+        "status" : "success"
     },
     "headers" : {
       "Content-Type": "application/json"
@@ -589,9 +589,8 @@ POST https://mockcheckout-test.cfcdcinternaltest.kroger.com/__admin/mappings
 
 * Send the same mapping file as input.
 * WireMock starts using the mapping instantly
-* The response contains a unique ID to identify the mapping.
 
-```json
+```
 "id": "68c47560-164a-4099-af1e-5fc12f2cc815"
 ```
 
@@ -605,9 +604,8 @@ POST https://mockcheckout-test.cfcdcinternaltest.kroger.com/__admin/mappings
 DELETE https://mockcheckout-test.cfcdcinternaltest.kroger.com/__admin/mappings/37416e0c-76fc-4d39-b98a-df1d47de5cc6
 ```
 
-Send the mapping id in the URL
-
-WireMock instantly removes the mapping.
+* Send the mapping id in the URL
+* WireMock instantly removes the mapping.
 
 #HSLIDE
 
