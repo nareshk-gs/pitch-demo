@@ -2,9 +2,10 @@
 ## WIREMOCK 
 ### More than just a Stub
 
-#### Arun, Kalesh, Naresh.
 
 ![WireMock](assets/wiremock-logo.png)
+#### Arun / Kalesh / Naresh
+
 #HSLIDE
 
 ## What is WIRE MOCK?
