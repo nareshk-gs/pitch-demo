@@ -8,6 +8,25 @@
 
 #HSLIDE
 
+### QA team walks in to a bar
+
+- Functional tester orders 0 beer |
+- Performance tester orders 999999 beers |
+- Manual tester orders -1 beer |
+- Automation tester orders a crocodile | 
+- SOA Tester orders beer with name "kIsSmEyErbArReLReSeRvEDaRksIdEOftHemOoNImPeRiAlpOrTeR" |
+
+#VSLIDE
+
+### of course - the SOA tester
+
+- "kIsSmEyErbArReLReSeRvEDaRksIdEOftHemOoNImPeRiAlpOrTeR"
+- "Kissmeyer barrel reserve dark side of the moon imperial porter"
+
+![WireMock](assets/beer.jpg)
+
+#HSLIDE
+
 ## What is WIRE MOCK?
 
 ### Advanced HTTP API simulator
@@ -631,7 +650,7 @@ DELETE https://mockcheckout-test.cfcdcinternaltest.kroger.com/__admin/mappings/3
 ```
 - Set of powerful APIs to control the Server at runtime |
 - Add / Update / Remove Mappings |
-- Get the request / response flowing through WireMock |
+- Intercept requests flowing through WireMock |
 - Reset mappings / recordings / logs |
 - Reset scenario of stateful Stub |
 - Enabled immediately. No Server restart |
