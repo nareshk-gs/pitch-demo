@@ -505,6 +505,62 @@ https://mockcheckout-test.cfcdcinternaltest.kroger.com/__admin/requests/find
 
 #HSLIDE
 
+## RESPONSE Templating
+
+#VSLIDE
+
+## RESPONSE Templating
+
+#### Get data from input to send in stubbed output
+
+- Get data from URL / query parameters
+- Get data from request json
+- Get data from headers
+- Get data from cookies
+
+#VSLIDE
+
+#### RESPONSE Templating
+
+```
+{
+  "priority": 1,
+  "request" : {
+    "urlPattern" : "/click-list-master-order/sub-order/(.*)",
+    "method" : "PUT",
+    "headers": {
+      "X-Correlation-Id": {
+        "equalTo": "updateSubOrder_notFound"
+      }
+    }
+  },
+  "response" : {
+    "status" : 404,
+    "jsonBody" : {
+      "transactionId": "07fa7203-c691-4212-921b-9e9fec54cbd8",
+      "correlationId": "11801236283590334",
+      "httpStatus": 404,
+      "appErrorCode": "MasterOrderNotFound",
+      "detail": {
+        "errors": [
+          "Master order not found for subOrderId: {{request.path.[2]}}"
+        ],
+        "context": {
+          "subOrderId": "{{request.path.[2]}}"
+        }
+      }
+    },
+    "transformers": ["response-template"]
+  }
+}
+```
+
+@[28] (Enable templating)
+@[21] (Take the suborder from request URL and send in response. /click-list-master-order/sub-order/1180645484990963501)
+
+
+#HSLIDE
+
 ## THANKS!
 ![WireMock](assets/wiremock-logo.png)
 #### http://wiremock.org/
