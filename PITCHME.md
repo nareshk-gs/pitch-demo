@@ -2,7 +2,7 @@
 ## WIREMOCK 
 ### More than just a Stub
 
-![Press Down Key](assets/wiremock-logo.png)
+![WireMock](assets/wiremock-logo.png)
 #HSLIDE
 
 ## What is WIRE MOCK?
@@ -318,17 +318,23 @@ java -jar wiremock-standalone-2.6.0.jar
 
 #VSLIDE
 
+## Timeout
+
+![WiremockTimeout](assets/WireMockTimeout.png)
+
+#VSLIDE
+
 ## Timeout - example
 
 ```
 {
   "priority": 1,
   "request" : {
-    "urlPattern" : "/click-list-master-order/draft-order/(.*)/getByProfileId",
-    "method" : "GET",
+    "urlPattern" : "/onlinepayments/order/auth/(.*)",
+    "method" : "POST",
     "headers": {
       "X-Correlation-Id": {
-        "equalTo": "do_timeout"
+        "equalTo": "walletauth_timeout"
       }
     }
   },
@@ -336,13 +342,55 @@ java -jar wiremock-standalone-2.6.0.jar
     "fixedDelayMilliseconds": 5000,
     "transformers": ["response-template"],
     "status" : 500,
-    "jsonBody" : {
-        "transactionId": "bdec63f5-6c34-4553-a735-b02ce18d99dc",
-        "correlationId": "11725530685341029",
-        "httpStatus": 500
+    "bodyFileName" : "body-500.json",
+    "headers" : {
+      "Server" : "nginx",
+      "Content-Type" : "application/json;charset=UTF-8",
+      "Transfer-Encoding" : "chunked",
+      "Connection" : "keep-alive",
+      "Keep-Alive" : "timeout=5",
+      "Transaction-Id" : "46b175ee-e18b-419c-80f5-0c2543201d4f"
     }
   }
 }
 ```
 
-@[13] (Delay 5 secs before sending response)
+@[13] (Delay 5 secs before sending 500 response)
+
+#VSLIDE
+
+## Timeout and Proxy
+
+![WiremockTimeoutAndProxy](assets/WireMockTimeoutPoxy.png)
+
+#VSLIDE
+
+### Timeout and Proxy  - example
+
+```
+{
+  "priority": 1,
+  "request" : {
+    "urlPattern" : "/onlinepayments/order/auth/(.*)",
+    "method" : "POST",
+    "headers": {
+      "X-Correlation-Id": {
+        "equalTo": "walletauth_timeout_Proxy"
+      }
+    }
+  },
+  "response" : {
+    "fixedDelayMilliseconds": 5000,
+    "proxyBaseUrl" : "https://ecsb-test.kroger.com"
+  }
+}
+```
+
+@[13] (Delay 5 secs)
+@[14] (Forward request to actual service)
+
+#HSLIDE
+
+## THANKS!
+![WireMock](assets/wiremock-logo.png)
+#### http://wiremock.org/
