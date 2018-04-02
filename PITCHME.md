@@ -587,15 +587,14 @@ https://mockcheckout-test.cfcdcinternaltest.kroger.com/__admin/requests/find
 POST https://mockcheckout-test.cfcdcinternaltest.kroger.com/__admin/mappings
 ```
 
-Send the same mapping file as input.
+* Send the same mapping file as input.
+* WireMock starts using the mapping instantly
 
-The response contains a unique ID to identify the mapping.
 
 ```json
 "id": "68c47560-164a-4099-af1e-5fc12f2cc815"
 ```
-
-WireMock starts using the mapping instantly
+* The response contains a unique ID to identify the mapping.
 
 #VSLIDE
 
