@@ -513,14 +513,14 @@ https://mockcheckout-test.cfcdcinternaltest.kroger.com/__admin/requests/find
 
 #### Get data from input to send in stubbed output
 
-- Get data from URL / query parameters
-- Get data from request json
-- Get data from headers
-- Get data from cookies
+- Get data from URL / query parameters |
+- Get data from request json |
+- Get data from headers |
+- Get data from cookies |
 
 #VSLIDE
 
-#### RESPONSE Templating
+## RESPONSE Templating
 
 ```
 {
@@ -556,7 +556,9 @@ https://mockcheckout-test.cfcdcinternaltest.kroger.com/__admin/requests/find
 ```
 
 @[28] (Enable templating)
-@[21] (Take the suborder from request URL and send in response. /click-list-master-order/sub-order/1180645484990963501)
+@[21] (Take the suborder from request URL and send in response. 
+
+/click-list-master-order/sub-order/1180645484990963501)
 
 
 #HSLIDE
