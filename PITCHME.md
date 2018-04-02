@@ -23,7 +23,9 @@
 
 ## How WIRE MOCK?
 
-```java -jar wiremock-standalone-2.6.0.jar```
+```
+java -jar wiremock-standalone-2.6.0.jar
+```
 - Just a jar and a bunch of JSONs |
 - That's it! (No Gradle, No Maven, No artifactory, No coding, No problem!) |
 
@@ -118,13 +120,6 @@ java -jar wiremock-standalone-2.6.0.jar
 ```
 
 @[14-24] (Response JSON Body - Sending a different price)
-
-#VSLIDE
-
-#### Kroger third party examples 
-
-- Vantiv :: Add new credit card type |
-- Accertify :: Simulate all business rules that are not supported |
 
 #VSLIDE
 
@@ -260,7 +255,7 @@ java -jar wiremock-standalone-2.6.0.jar
 }
 ```
 
-@[21-28] (Response Headers)
+@[19-27] (Response Headers)
 @[22] (Response Header - Send content type as XML instead of JSON)
 
 #VSLIDE
@@ -273,13 +268,19 @@ java -jar wiremock-standalone-2.6.0.jar
 
 #VSLIDE
 
-#### Third Party limitations
+## Third Party limitations
 
 - Rate |
 - Cost |
 - Availability |
 - Access Restrictions |
 
+#VSLIDE
+
+## Kroger third party limitations - examples 
+
+- Vantiv :: Add new credit card type |
+- Accertify :: Simulate all business rules that are not supported |
 
 
 #HSLIDE
