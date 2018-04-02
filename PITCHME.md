@@ -616,11 +616,17 @@ DELETE https://mockcheckout-test.cfcdcinternaltest.kroger.com/__admin/mappings/3
 
 #VSLIDE
 
-## Admin APIs
+### Admin APIs
 
+```
+/__admin/docs/
+```
+- Set of powerful APIs to control the Server at runtime |
 - Add / Update / Remove Mappings |
 - Get the request / response flowing through WireMock |
+- Reset mappings / recordings / logs |
 - Reset scenario of stateful Stub |
+- Enabled immediately. No Server restart |
 - Many more ... |
 
 #HSLIDE
