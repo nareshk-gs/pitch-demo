@@ -441,7 +441,7 @@ java -jar wiremock-standalone-2.6.0.jar
 
 #VSLIDE
 
-### Logging / Debugging - Sample (Wallet Auth)
+#### Logging / Debugging - Sample (Wallet Auth)
 
 ```
 https://mockcheckout-test.cfcdcinternaltest.kroger.com/__admin/requests/find
