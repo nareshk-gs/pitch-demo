@@ -23,9 +23,9 @@
 
 ## How WIRE MOCK?
 
+```java -jar wiremock-standalone-2.6.0.jar```
 - Just a jar and a bunch of JSONs |
-- ```java -jar wiremock-standalone-2.6.0.jar``` |
-- Thats it! (No Gradle, No Maven, No artifactory, No coding, No problem!) |
+- That's it! (No Gradle, No Maven, No artifactory, No coding, No problem!) |
 
 #HSLIDE
 
@@ -117,11 +117,126 @@ java -jar wiremock-standalone-2.6.0.jar
 }
 ```
 
-@[3-11] (Request pattern match)
-@[12-26] (Response)
-@[13] (Response HTTP Status Code)
-@[14-25] (Response JSON Body - Sending a different price)
+@[14-24] (Response JSON Body - Sending a different price)
 
+#VSLIDE
+
+#### Response with partial data
+
+```
+{
+  "priority": 1,
+  "request" : {
+    "urlPattern" : "/click-list-adjustment/adjustment",
+    "method" : "POST",
+    "headers": {
+      "X-Correlation-Id": {
+        "equalTo": "cladj_differentfee"
+      }
+    }
+  },
+  "response" : {
+    "status" : 200,
+    "jsonBody" : {
+      "fee": {
+        "fulfillment": "CurbSide",
+        "price": 5.00
+      }
+    }
+   }
+}
+```
+
+@[14-19] (Response JSON Body - Sending only mandatory fields)
+
+#VSLIDE
+
+#### Invalid Responses
+
+```
+{
+  "priority": 1,
+  "request" : {
+    "urlPattern" : "/click-list-adjustment/adjustment",
+    "method" : "POST",
+    "headers": {
+      "X-Correlation-Id": {
+        "equalTo": "cladj_differentfee"
+      }
+    }
+  },
+  "response" : {
+    "status" : 200,
+    "jsonBody" : {
+      "fee": {
+        "fulfillment": CurbSide,
+        "price": 5.00
+      }
+    }
+   }
+}
+```
+
+@[14-19] (Response JSON Body - Sending a invalid JSON)
+
+#VSLIDE
+
+#### Response Headers
+
+```
+{
+  "priority": 1,
+  "request" : {
+    "urlPattern" : "/click-list-adjustment/adjustment",
+    "method" : "POST",
+    "headers": {
+      "X-Correlation-Id": {
+        "equalTo": "cladj_differentfee"
+      }
+    }
+  },
+  "response" : {
+    "status" : 200,
+    "jsonBody" : {
+      "fee": {
+        "fulfillment": "CurbSide",
+        "price": 5.00
+      }
+    },
+    "headers" : {
+          "Server" : "nginx",
+          "Content-Type" : "application/xml;charset=UTF-8",
+          "Transfer-Encoding" : "chunked",
+          "Connection" : "keep-alive",
+          "Keep-Alive" : "timeout=5",
+          "Transaction-Id" : "46b175ee-e18b-419c-80f5-0c2543201d4f"
+     }
+   }
+}
+```
+
+@[21-28] (Response Headers)
+@[23] (Response Header - Send content type as XML instead of JSON)
+
+#VSLIDE
+
+#### Hard to Setup Data
+
+- Item with no price |
+- Item that always has promo price |
+- Item always in Clicklist / not in Clicklist |
+
+#VSLIDE
+
+#### Third Party limitations
+
+- Rate |
+- Cost |
+- Availability |
+- Access Restrictions |
+
+- Vantiv :: Add new credit card type |
+- Accertify :: Simulate all business rules that are not supported |
 
 #HSLIDE
 
