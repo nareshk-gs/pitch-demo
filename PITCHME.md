@@ -24,7 +24,7 @@
 ## How WIRE MOCK?
 
 - Just a jar and a bunch of JSONs |
-- java -jar wiremock-standalone-2.6.0.jar |
+- ```java -jar wiremock-standalone-2.6.0.jar``` |
 - Thats it! (No Gradle, No Maven, No artifactory, No coding, No problem!) |
 
 #HSLIDE
@@ -36,7 +36,9 @@
 ## Recording
 
 ```
-java -jar wiremock-standalone-2.6.0.jar --proxy-all https://ecsb.kroger.com  --record-mappings
+java -jar wiremock-standalone-2.6.0.jar 
+        --proxy-all https://ecsb.kroger.com  
+        --record-mappings
 ```
 
 ![WiremockRecordings](assets/WireMock_Recording.png)
