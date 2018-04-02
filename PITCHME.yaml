@@ -1,2 +1,3 @@
 logo : assets/wiremock-logo.png
 logo-position : top-right
+theme-override : assets/css/PITCHME.css

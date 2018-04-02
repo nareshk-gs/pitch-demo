@@ -33,7 +33,7 @@
 
 #VSLIDE
 
-## Recoding
+## Recording
 
 ```
 java -jar wiremock-standalone-2.6.0.jar --proxy-all https://ecsb.kroger.com  --record-mappings
@@ -84,7 +84,7 @@ java -jar wiremock-standalone-2.6.0.jar --proxy-all https://ecsb.kroger.com  --r
 
 #VSLIDE
 
-## Response with specific data
+#### Response with specific data
 
 ```
 {
