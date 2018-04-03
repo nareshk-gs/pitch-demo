@@ -4,7 +4,7 @@
 
 
 ![WireMock](assets/wiremock-logo.png)
-#### Arun(THOR) / Kalesh() / Naresh()
+#### Arun (THOR),  Kalesh / Naresh (Personalization)
 
 #HSLIDE
 
