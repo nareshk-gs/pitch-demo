@@ -4,7 +4,10 @@
 
 
 ![WireMock](assets/wiremock-logo.png)
-###### Arun (THOR),  Kalesh / Naresh (Personalization)
+ 
+Arun Dharmar (THOR),  
+Kalesh Rajappan (Personalization) 
+Naresh Gourishetty (Personalization)
 
 #HSLIDE
 
@@ -34,19 +37,18 @@
 - Test data can be tricky |
 - Some scenarios are hard to reproduce |
 - Anything can happen in production |
-- Never underestimate a SOA Tester |
+
+#HSLIDE
+
+## Why Mocking?
+
+<img src="assets/challenges.png" width="80%">
 
 #HSLIDE
 
 ## What is WIRE MOCK?
 
 ### Advanced HTTP API simulator
-
-#VSLIDE
-
-## Why WIRE MOCK?
-
-<img src="assets/challenges.png" width="80%">
 
 
 #VSLIDE
@@ -57,7 +59,7 @@
 - Test unreproducible cases |
 - 3rd party limitations |
 - Reliable / Faster |
-- Intercept messages |
+- Isolate app under development |
 
 #VSLIDE
 
@@ -69,27 +71,6 @@ java -jar wiremock-standalone-2.6.0.jar
 - Just a jar and a bunch of JSONs |
 - That's it! (No Gradle, No Maven, No artifactory, No coding, No problem!) |
 - Optionally use Java |
-
-#VSLIDE
-
-## Deploy WIRE MOCK?
-
-**DockerFile**
-```
-FROM docker-prod.registry.kroger.com/library/java-openjdk:8-latest
-
-WORKDIR /app
-EXPOSE 8080
-COPY . /app/
-
-CMD ["/app/entrypoint.sh"]
-```
-
-**entrypoint.sh**
-```
-#!/bin/sh
-java -jar /app/wiremock-standalone-*.jar --port 8080 --local-response-templating --verbose
-```
 
 #HSLIDE
 
@@ -145,7 +126,32 @@ java -jar wiremock-standalone-2.6.0.jar
 
 #HSLIDE
 
-## Simulating Test Data
+## DEMO
+
+#VSLIDE
+
+## Deploy WIRE MOCK?
+
+**DockerFile**
+```
+FROM docker-prod.registry.kroger.com/library/java-openjdk:8-latest
+
+WORKDIR /app
+EXPOSE 8080
+COPY . /app/
+
+CMD ["/app/entrypoint.sh"]
+```
+
+**entrypoint.sh**
+```
+#!/bin/sh
+java -jar /app/wiremock-standalone-*.jar --port 8080 --local-response-templating --verbose
+```
+
+#HSLIDE
+
+## Improve Time to Market
 
 #VSLIDE
 
@@ -158,6 +164,60 @@ java -jar wiremock-standalone-2.6.0.jar
 #### Application Development - Parallel
 
 ![WireMock](assets/AD_timeline2.png)
+
+#HSLIDE
+
+## Simulating Test Data
+
+#VSLIDE
+
+## Request Matching
+
+- URL |
+- HTTP Method |
+- Query parameters |
+- Headers |
+- Basic authentication (a special case of header matching) |
+- Cookies |
+- Request body |
+- Multipart/form-data |
+
+#VSLIDE
+
+## Request Matching
+
+```
+{
+  "priority": 1,
+  "request" : {
+    "urlPattern" : "/click-list-adjustment/adjustment",
+    "method" : "POST",
+    "headers": {
+      "X-Correlation-Id": {
+        "equalTo": "cladj_differentfee"
+      }
+    }
+  },
+  "response" : {
+    "status" : 200,
+    "jsonBody" : {
+      "fee": {
+        "fulfillment": "CurbSide",
+        "banner": "kroger",
+        "division": "014",
+        "store": "00383",
+        "price": 5.00,
+        "plu": "223",
+        "itemDesc": "Service Fee PLU - CurbSide"
+      }
+    }
+   }
+}
+```
+@[4] (URL Pattern Match)
+@[5] (REST Method Match)
+@[6-10] (Header Match - like CorrelationID)
+
 
 #VSLIDE
 
@@ -308,6 +368,7 @@ java -jar wiremock-standalone-2.6.0.jar
 - Item with no price |
 - Item that always has promo price |
 - Item always in Clicklist / not in Clicklist |
+- Specific type of coupons |
 
 #VSLIDE
 
@@ -563,7 +624,7 @@ java -jar wiremock-standalone-2.6.0.jar
 
 - Service internal retry scenarios |
 - Order status for an order management system |
-- Change in coupon status within a order flow |
+- Change in coupon status when loaded to card |
 
 #HSLIDE
 
