@@ -11,8 +11,8 @@
 ### QA team walks in to a bar
 <font size=6>
 - Functional tester orders 0 beer |
-- Performance tester orders 999999 beers |
 - Manual tester orders -1 beer |
+- Performance tester orders 999999 beers |
 - Automation tester orders a crocodile | 
 - SOA Tester orders beer with name "kIsSmEyErbArReLReSeRvEDaRksIdEOftHemOoNImPeRiAlpOrTeR" |
 
@@ -26,6 +26,15 @@
 ```
 
 <img src="assets/beer.jpg" width="20%">
+
+#VSLIDE
+
+### Moral of the story
+
+- Test data can be tricky |
+- Anything can happen in production |
+- Some scenarios are hard to reproduce |
+- **Never underestimate a SOA Tester** |
 
 #HSLIDE
 
