@@ -126,6 +126,8 @@ java -jar wiremock-standalone-2.6.0.jar
 @[9-11] (Response JSON Body)
 @[12-14] (Response Headers)
 
+#### Mapping - example
+
 #HSLIDE
 
 ## Simulating Test Data
