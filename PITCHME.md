@@ -4,7 +4,7 @@
 
 
 ![WireMock](assets/wiremock-logo.png)
-#### Arun(Checkout) / Kalesh(Personalization) / Naresh(Personalization)
+#### Arun(THORT / Kalesh() / Naresh()
 
 #HSLIDE
 
@@ -55,7 +55,7 @@
 
 - Test Faults |
 - Test unreproducible cases |
-- 3rd party limitaions |
+- 3rd party limitations |
 - Reliable / Faster |
 - Intercept messages |
 
@@ -68,6 +68,28 @@ java -jar wiremock-standalone-2.6.0.jar
 ```
 - Just a jar and a bunch of JSONs |
 - That's it! (No Gradle, No Maven, No artifactory, No coding, No problem!) |
+- Optionally use Java |
+
+#VSLIDE
+
+## Deploy WIRE MOCK?
+
+**DockerFile**
+```
+FROM docker-prod.registry.kroger.com/library/java-openjdk:8-latest
+
+WORKDIR /app
+EXPOSE 8080
+COPY . /app/
+
+CMD ["/app/entrypoint.sh"]
+```
+
+**entrypoint.sh**
+```
+#!/bin/sh
+java -jar /app/wiremock-standalone-*.jar --port 8080 --local-response-templating --verbose
+```
 
 #HSLIDE
 
@@ -724,6 +746,16 @@ DELETE https://mockcheckout-test.cfcdcinternaltest.kroger.com/__admin/mappings/3
 #### Checkout Mobile
 
 ![WireMockMobileCheckout](assets/MSL_WireMock.png)
+
+#VSLIDE
+
+## WireMock in Digital
+#### Personalization
+
+- Fail over / Fall back / Back fill / Error handling Testing for all services
+- Parallel Development or Improve Time to Market
+    - Recipe Ingredient to upc service mocked to support Good Eats
+    - Third Party (Spot Front) services mocked for Monetization services
 
 #HSLIDE
 
