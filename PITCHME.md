@@ -117,7 +117,24 @@ java -jar wiremock-standalone-2.6.0.jar
 
 ## Mapping - example
 
-+++?code=code/mapping.json
+```json
+{
+  "priority": 1,
+  "request" : {
+    "urlPattern" : "/APITest/",
+    "method" : "GET"
+  },
+  "response" : {
+    "status" : 200,
+    "jsonBody" : {
+        "status" : "success"
+    },
+    "headers" : {
+      "Content-Type": "application/json"
+    }
+  }
+}
+```
 
 @[2] (Order in which WireMock picks up mappings. 1 - Highest)
 @[3-6] (Request to be matched against)
@@ -125,8 +142,6 @@ java -jar wiremock-standalone-2.6.0.jar
 @[8] (HTTP Response Status Code)
 @[9-11] (Response JSON Body)
 @[12-14] (Response Headers)
-
-#### Mapping - example
 
 #HSLIDE
 
@@ -753,4 +768,4 @@ DELETE https://mockcheckout-test.cfcdcinternaltest.kroger.com/__admin/mappings/3
 ![WireMock](assets/wiremock-logo.png)
 #### http://wiremock.org/
 
-#### “ Under testing is a sin, over testing is a crime ”
+#### “ 'Under testing' is a sin, 'over testing' is a crime ”
