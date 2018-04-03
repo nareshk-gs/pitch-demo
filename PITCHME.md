@@ -46,7 +46,7 @@
 
 ## Why WIRE MOCK?
 
-![WireMock](assets/challenges.png)
+<img src="assets/challenges.jpg" width="80%">
 
 
 #VSLIDE
