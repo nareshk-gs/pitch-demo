@@ -46,7 +46,7 @@
 
 ## Why WIRE MOCK?
 
-<img src="assets/challenges.jpg" width="80%">
+<img src="assets/challenges.png" width="80%">
 
 
 #VSLIDE
