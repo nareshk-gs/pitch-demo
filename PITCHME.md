@@ -13,7 +13,6 @@
 - Functional tester orders 0 beer |
 - Manual tester orders (-1) beer |
 - Performance tester orders 999999 beers |
-- 99999 stress testers orders beer at the same time |
 - Automation tester orders a deer | 
 - SOA Tester orders beer with name "kIsSmEyErbArReLReSeRvEDaRksIdEOftHemOoNImPeRiAlpOrTeR" |
 
@@ -718,3 +717,7 @@ DELETE https://mockcheckout-test.cfcdcinternaltest.kroger.com/__admin/mappings/3
 ## THANKS!
 ![WireMock](assets/wiremock-logo.png)
 #### http://wiremock.org/
+
+```
+“Under testing is a sin, over testing is a crime”
+```
