@@ -759,7 +759,6 @@ DELETE https://mockcheckout-test.cfcdcinternaltest.kroger.com/__admin/mappings/3
 
 #HSLIDE
 
-## Questions?
 <img src="assets/Meme_Questions.jpg" width="50%">
 
 #HSLIDE
