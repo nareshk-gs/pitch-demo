@@ -4,7 +4,7 @@
 
 
 ![WireMock](assets/wiremock-logo.png)
-#### Arun / Kalesh / Naresh
+#### Arun(Checkout) / Kalesh(Personalization) / Naresh(Personalization)
 
 #HSLIDE
 
@@ -41,6 +41,13 @@
 ## What is WIRE MOCK?
 
 ### Advanced HTTP API simulator
+
+#VSLIDE
+
+## Why WIRE MOCK?
+
+![WireMock](assets/challenges.png)
+
 
 #VSLIDE
 
@@ -118,6 +125,17 @@ java -jar wiremock-standalone-2.6.0.jar
 
 ## Simulating Test Data
 
+#VSLIDE
+
+#### Application Development - Traditional
+
+![WireMock](assets/AD_timeline.png)
+
+#VSLIDE
+
+#### Application Development - Parallel
+
+![WireMock](assets/AD_timeline2.png)
 
 #VSLIDE
 
@@ -394,6 +412,61 @@ java -jar wiremock-standalone-2.6.0.jar
 
 #HSLIDE
 
+## RESPONSE Templating
+
+#VSLIDE
+
+## RESPONSE Templating
+
+#### Get data from input to send in stubbed output
+
+- Get data from URL / query parameters |
+- Get data from request json |
+- Get data from headers |
+- Get data from cookies |
+
+#VSLIDE
+
+### RESPONSE Templating
+
+```json
+{
+  "priority": 1,
+  "request" : {
+    "urlPattern" : "/click-list-master-order/sub-order/(.*)",
+    "method" : "PUT",
+    "headers": {
+      "X-Correlation-Id": {
+        "equalTo": "updateSubOrder_notFound"
+      }
+    }
+  },
+  "response" : {
+    "status" : 404,
+    "jsonBody" : {
+      "transactionId": "07fa7203-c691-4212-921b-9e9fec54cbd8",
+      "correlationId": "11801236283590334",
+      "httpStatus": 404,
+      "appErrorCode": "MasterOrderNotFound",
+      "detail": {
+        "errors": [
+          "Master order not found for subOrderId: {{request.path.[2]}}"
+        ],
+        "context": {
+          "subOrderId": "{{request.path.[2]}}"
+        }
+      }
+    },
+    "transformers": ["response-template"]
+  }
+}
+```
+
+@[28] (Enable templating)
+@[21] (Get suborder from URL ```/click-list-master-order/sub-order/1180645484990963501```)
+
+#HSLIDE
+
 ## Stateful Mocking
 
 #VSLIDE
@@ -546,61 +619,6 @@ https://mockcheckout-test.cfcdcinternaltest.kroger.com/__admin/requests/find
 
 #HSLIDE
 
-## RESPONSE Templating
-
-#VSLIDE
-
-## RESPONSE Templating
-
-#### Get data from input to send in stubbed output
-
-- Get data from URL / query parameters |
-- Get data from request json |
-- Get data from headers |
-- Get data from cookies |
-
-#VSLIDE
-
-### RESPONSE Templating
-
-```json
-{
-  "priority": 1,
-  "request" : {
-    "urlPattern" : "/click-list-master-order/sub-order/(.*)",
-    "method" : "PUT",
-    "headers": {
-      "X-Correlation-Id": {
-        "equalTo": "updateSubOrder_notFound"
-      }
-    }
-  },
-  "response" : {
-    "status" : 404,
-    "jsonBody" : {
-      "transactionId": "07fa7203-c691-4212-921b-9e9fec54cbd8",
-      "correlationId": "11801236283590334",
-      "httpStatus": 404,
-      "appErrorCode": "MasterOrderNotFound",
-      "detail": {
-        "errors": [
-          "Master order not found for subOrderId: {{request.path.[2]}}"
-        ],
-        "context": {
-          "subOrderId": "{{request.path.[2]}}"
-        }
-      }
-    },
-    "transformers": ["response-template"]
-  }
-}
-```
-
-@[28] (Enable templating)
-@[21] (Get suborder from URL ```/click-list-master-order/sub-order/1180645484990963501```)
-
-#HSLIDE
-
 ## Dynamic Mocking
 
 #VSLIDE
@@ -718,4 +736,4 @@ DELETE https://mockcheckout-test.cfcdcinternaltest.kroger.com/__admin/mappings/3
 ![WireMock](assets/wiremock-logo.png)
 #### http://wiremock.org/
 
-#### “Under testing is a sin, over testing is a crime”
+#### “ Under testing is a sin, over testing is a crime ”
