@@ -718,6 +718,4 @@ DELETE https://mockcheckout-test.cfcdcinternaltest.kroger.com/__admin/mappings/3
 ![WireMock](assets/wiremock-logo.png)
 #### http://wiremock.org/
 
-```
-“Under testing is a sin, over testing is a crime”
-```
+**“Under testing is a sin, over testing is a crime”**
