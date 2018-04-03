@@ -118,7 +118,7 @@ java -jar wiremock-standalone-2.6.0.jar
 ## Mapping - example
 
 ```
----?code=code/mapping.json&lang=language-hint
+                  ---?code=code/mapping.json
 ```
 
 @[2] (Order in which WireMock picks up mappings. 1 - Highest)
