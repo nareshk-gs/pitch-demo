@@ -13,7 +13,8 @@
 - Functional tester orders 0 beer |
 - Manual tester orders (-1) beer |
 - Performance tester orders 999999 beers |
-- Automation tester orders a crocodile | 
+- 99999 stress testers orders beer at the same time |
+- Automation tester orders a deer | 
 - SOA Tester orders beer with name "kIsSmEyErbArReLReSeRvEDaRksIdEOftHemOoNImPeRiAlpOrTeR" |
 
 #VSLIDE
