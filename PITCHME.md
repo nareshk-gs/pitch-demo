@@ -5,8 +5,10 @@
 
 ![WireMock](assets/wiremock-logo.png)
  
-Arun Dharmar (THOR),  
-Kalesh Rajappan (Personalization) 
+Arun Dharmar (THOR)
+
+Kalesh Rajappan (Personalization)
+ 
 Naresh Gourishetty (Personalization)
 
 #HSLIDE
@@ -124,51 +126,6 @@ java -jar wiremock-standalone-2.6.0.jar
 @[9-11] (Response JSON Body)
 @[12-14] (Response Headers)
 
-#HSLIDE
-
-## DEMO
-
-#VSLIDE
-
-## Deploy WIRE MOCK?
-
-**DockerFile**
-```
-FROM docker-prod.registry.kroger.com/library/java-openjdk:8-latest
-
-WORKDIR /app
-EXPOSE 8080
-COPY . /app/
-
-CMD ["/app/entrypoint.sh"]
-```
-
-**entrypoint.sh**
-```
-#!/bin/sh
-java -jar /app/wiremock-standalone-*.jar --port 8080 --local-response-templating --verbose
-```
-
-#HSLIDE
-
-## Improve Time to Market
-
-#VSLIDE
-
-#### Application Development - Traditional
-
-![WireMock](assets/AD_timeline.png)
-
-#VSLIDE
-
-#### Application Development - Parallel
-
-![WireMock](assets/AD_timeline2.png)
-
-#HSLIDE
-
-## Simulating Test Data
-
 #VSLIDE
 
 ## Request Matching
@@ -218,6 +175,54 @@ java -jar /app/wiremock-standalone-*.jar --port 8080 --local-response-templating
 @[5] (REST Method Match)
 @[6-10] (Header Match - like CorrelationID)
 
+#HSLIDE
+
+## DEMO
+
+#HSLIDE
+
+## Deploy WIRE MOCK?
+
+**DockerFile**
+```
+FROM docker-prod.registry.kroger.com/library/java-openjdk:8-latest
+
+WORKDIR /app
+EXPOSE 8080
+COPY . /app/
+
+CMD ["/app/entrypoint.sh"]
+```
+
+**entrypoint.sh**
+```
+#!/bin/sh
+java -jar /app/wiremock-standalone-*.jar --port 8080 --local-response-templating --verbose
+```
+
+#HSLIDE
+
+## Use Cases
+
+#HSLIDE
+
+## Improve Time to Market
+
+#VSLIDE
+
+#### Application Development - Traditional
+
+![WireMock](assets/AD_timeline.png)
+
+#VSLIDE
+
+#### Application Development - Parallel
+
+![WireMock](assets/AD_timeline2.png)
+
+#HSLIDE
+
+## Simulating Test Data
 
 #VSLIDE
 
@@ -256,7 +261,7 @@ java -jar /app/wiremock-standalone-*.jar --port 8080 --local-response-templating
 
 #VSLIDE
 
-## Simulating Faults
+#### Simulating Faults
 
 ```json
 {
@@ -361,6 +366,10 @@ java -jar /app/wiremock-standalone-*.jar --port 8080 --local-response-templating
 @[20-27] (Response Headers)
 @[22] (Response Header - Send content type as XML instead of JSON)
 
+#HSLIDE
+
+## Hard to Setup Data
+
 #VSLIDE
 
 ## Hard to Setup Data
@@ -369,6 +378,10 @@ java -jar /app/wiremock-standalone-*.jar --port 8080 --local-response-templating
 - Item that always has promo price |
 - Item always in Clicklist / not in Clicklist |
 - Specific type of coupons |
+
+#HSLIDE
+
+## Third Party limitations
 
 #VSLIDE
 
