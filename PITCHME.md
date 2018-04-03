@@ -126,6 +126,10 @@ java -jar wiremock-standalone-2.6.0.jar
 @[9-11] (Response JSON Body)
 @[12-14] (Response Headers)
 
+#HSLIDE
+
+## Request Matching
+
 #VSLIDE
 
 ## Request Matching
@@ -181,7 +185,7 @@ java -jar wiremock-standalone-2.6.0.jar
 
 #HSLIDE
 
-## Deploy WIRE MOCK?
+## Deploy WIRE MOCK
 
 **DockerFile**
 ```
@@ -429,7 +433,15 @@ java -jar /app/wiremock-standalone-*.jar --port 8080 --local-response-templating
 @[7] (base URL for Master Order)
 @[2] (Higher Priority)
 
-#HSLIDE
+#VSLIDE
+
+## Proxying
+
+- Flexibility | 
+- Don't need to switch between mock vs actual service |
+- Mock only what is required |
+
+#HSLIDEx
 
 ## Timeouts
 
@@ -735,6 +747,25 @@ https://mockcheckout-test.cfcdcinternaltest.kroger.com/__admin/requests/find
 #VSLIDE
 
 ## Dynamic Mocking
+
+#HSLIDE
+
+## Use Cases - Recap
+
+#VSLIDE
+
+#### Use Cases - Recap
+
+- Improve Time to Market 
+- Simulating Test Data 
+- Hard to Setup Data 
+- Third Party Limitations 
+- Selective Mocking / Proxying 
+- Timeouts 
+- Stateful Mocking
+- Logging / Debugging
+- Dynamic Mocking
+- Increase in Test Automation coverage |
 
 #### Admin API - Add Mapping
 
