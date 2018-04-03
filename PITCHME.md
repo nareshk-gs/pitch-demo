@@ -117,24 +117,7 @@ java -jar wiremock-standalone-2.6.0.jar
 
 ## Mapping - example
 
-```json
-{
-  "priority": 1,
-  "request" : {
-    "urlPattern" : "/APITest/",
-    "method" : "GET"
-  },
-  "response" : {
-    "status" : 200,
-    "jsonBody" : {
-        "status" : "success"
-    },
-    "headers" : {
-      "Content-Type": "application/json"
-    }
-  }
-}
-```
+---?code=code/mapping.json&lang=language-hint
 
 @[2] (Order in which WireMock picks up mappings. 1 - Highest)
 @[3-6] (Request to be matched against)
@@ -760,7 +743,7 @@ DELETE https://mockcheckout-test.cfcdcinternaltest.kroger.com/__admin/mappings/3
 #HSLIDE
 
 ## Questions?
-![WireMock](assets/Meme_Questions.jpg)
+<img src="assets/Meme_Questions.jpg" width="80%">
 
 #HSLIDE
           
