@@ -117,7 +117,9 @@ java -jar wiremock-standalone-2.6.0.jar
 
 ## Mapping - example
 
+```
 ---?code=code/mapping.json&lang=language-hint
+```
 
 @[2] (Order in which WireMock picks up mappings. 1 - Highest)
 @[3-6] (Request to be matched against)
@@ -743,7 +745,7 @@ DELETE https://mockcheckout-test.cfcdcinternaltest.kroger.com/__admin/mappings/3
 #HSLIDE
 
 ## Questions?
-<img src="assets/Meme_Questions.jpg" width="80%">
+<img src="assets/Meme_Questions.jpg" width="50%">
 
 #HSLIDE
           
