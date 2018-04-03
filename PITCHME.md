@@ -5,7 +5,8 @@
 
 ![WireMock](assets/wiremock-logo.png)
  
-Arun Dharmar (THOR)
+ <font size=6>
+Arun Dharmar (Thor)
 
 Kalesh Rajappan (Personalization)
  
@@ -42,8 +43,7 @@ Naresh Gourishetty (Personalization)
 
 #HSLIDE
 
-## Why Mocking?
-
+## What slows us down?
 <img src="assets/challenges.png" width="80%">
 
 #HSLIDE
@@ -71,7 +71,7 @@ Naresh Gourishetty (Personalization)
 java -jar wiremock-standalone-2.6.0.jar
 ```
 - Just a jar and a bunch of JSONs |
-- That's it! (No Gradle, No Maven, No artifactory, No coding, No problem!) |
+- That's it! (No Gradle, No Maven, No artifactory) |
 - Optionally use Java |
 
 #HSLIDE
@@ -151,28 +151,29 @@ java -jar wiremock-standalone-2.6.0.jar
 {
   "priority": 1,
   "request" : {
-    "urlPattern" : "/click-list-adjustment/adjustment",
-    "method" : "POST",
+    "urlPattern" : "/click-list-master-order/draft-order/(.*)/getByProfileId",
+    "method" : "GET",
     "headers": {
       "X-Correlation-Id": {
-        "equalTo": "cladj_differentfee"
+        "equalTo": "getdraftorder_byprofile_404"
       }
     }
   },
   "response" : {
-    "status" : 200,
+    "status" : 404,
     "jsonBody" : {
-      "fee": {
-        "fulfillment": "CurbSide",
-        "banner": "kroger",
-        "division": "014",
-        "store": "00383",
-        "price": 5.00,
-        "plu": "223",
-        "itemDesc": "Service Fee PLU - CurbSide"
+      "transactionId": "80e2a2cb-8eb0-4e55-9286-e74945442cf8",
+      "correlationId": "2e303fbe-f307-4e6d-b213-9801fee2cc0e",
+      "httpStatus": 404,
+      "appErrorCode": "DraftOrderNotFound",
+      "detail": {
+        "errors": [
+          "Draft Order not found"
+        ],
+        "context": {}
       }
     }
-   }
+  }
 }
 ```
 @[4] (URL Pattern Match)
@@ -184,6 +185,10 @@ java -jar wiremock-standalone-2.6.0.jar
 ## DEMO
 
 #HSLIDE
+
+## Deploy WIRE MOCK
+
+#VSLIDE
 
 ## Deploy WIRE MOCK
 
@@ -441,7 +446,7 @@ java -jar /app/wiremock-standalone-*.jar --port 8080 --local-response-templating
 - Don't need to switch between mock vs actual service |
 - Mock only what is required |
 
-#HSLIDEx
+#HSLIDE
 
 ## Timeouts
 
@@ -653,6 +658,25 @@ java -jar /app/wiremock-standalone-*.jar --port 8080 --local-response-templating
 
 #HSLIDE
 
+## Admin APIs
+
+#VSLIDE
+
+### Admin APIs
+
+```
+/__admin/docs/
+```
+- Set of powerful APIs to control the Server at runtime |
+- Add / Update / Remove Mappings |
+- Intercept requests flowing through WireMock |
+- Reset mappings / recordings / logs |
+- Reset scenario of stateful Stub |
+- Enabled immediately. No Server restart |
+- Many more ... |
+
+#HSLIDE
+
 ## Logging / Debugging
 
 #VSLIDE
@@ -748,25 +772,6 @@ https://mockcheckout-test.cfcdcinternaltest.kroger.com/__admin/requests/find
 
 ## Dynamic Mocking
 
-#HSLIDE
-
-## Use Cases - Recap
-
-#VSLIDE
-
-#### Use Cases - Recap
-
-- Improve Time to Market 
-- Simulating Test Data 
-- Hard to Setup Data 
-- Third Party Limitations 
-- Selective Mocking / Proxying 
-- Timeouts 
-- Stateful Mocking
-- Logging / Debugging
-- Dynamic Mocking
-- Increase in Test Automation coverage |
-
 #### Admin API - Add Mapping
 
 ```
@@ -795,22 +800,22 @@ DELETE https://mockcheckout-test.cfcdcinternaltest.kroger.com/__admin/mappings/3
 
 #HSLIDE
 
-## Admin APIs
+## Use Cases - Recap
 
 #VSLIDE
 
-### Admin APIs
+#### Use Cases - Recap
 
-```
-/__admin/docs/
-```
-- Set of powerful APIs to control the Server at runtime |
-- Add / Update / Remove Mappings |
-- Intercept requests flowing through WireMock |
-- Reset mappings / recordings / logs |
-- Reset scenario of stateful Stub |
-- Enabled immediately. No Server restart |
-- Many more ... |
+- Improve Time to Market 
+- Simulating Test Data 
+- Hard to Setup Data 
+- Third Party Limitations 
+- Selective Mocking / Proxying 
+- Timeouts 
+- Stateful Mocking
+- Logging / Debugging
+- Dynamic Mocking
+- Increase in Test Automation coverage |
 
 #HSLIDE
 
