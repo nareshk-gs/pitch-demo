@@ -872,7 +872,7 @@ Note: Time out, Various Item validations, 500/400 errors
 
 #HSLIDE
 
-![WireMock](assets/Questions.jpg)
+![WireMock](assets/Questions.png)
 
 #HSLIDE
           
