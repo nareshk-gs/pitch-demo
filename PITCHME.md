@@ -560,12 +560,16 @@ java -jar /app/wiremock-standalone-*.jar --port 8080 --local-response-templating
 
 ![ItemPriceChange](assets/ItemPriceChange_Scenario.png)
 
+Note: User flow where user takes time to come to checkout and price changes during checkout
+
 #VSLIDE
 
 ### Stateful Mocking 
 - Product price change during checkout
 
 ![ItemPriceChange](assets/WireMockStateSample.png)
+
+Note: 2 different mapping with same Scenario and different state and response
 
 #VSLIDE
 
