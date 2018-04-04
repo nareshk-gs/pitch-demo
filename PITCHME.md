@@ -872,7 +872,7 @@ Note: Time out, Various Item validations, 500/400 errors
 
 #HSLIDE
 
-<img src="assets/Meme_Questions.jpg" width="50%">
+![WireMock](assets/Questions.jpg)
 
 #HSLIDE
           
