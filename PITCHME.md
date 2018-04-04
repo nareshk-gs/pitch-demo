@@ -14,35 +14,6 @@ Naresh Gourishetty (Personalization)
 
 #HSLIDE
 
-### QA team walks in to a bar
-<font size=6>
-- Functional tester orders 0 beer |
-- Manual tester orders (-1) beer |
-- Performance tester orders 999999 beers |
-- Automation tester orders a deer | 
-- SOA Tester orders beer with name "kIsSmEyErbArReLReSeRvEDaRksIdEOftHemOoNImPeRiAlpOrTeR" |
-
-#VSLIDE
-
-#### of course - the SOA tester
-
-```json
-"kIsSmEyErbArReLReSeRvEDaRksIdEOftHemOoNImPeRiAlpOrTeR"
-"Kissmeyer barrel reserve dark side of the moon imperial porter"
-```
-
-<img src="assets/beer.jpg" width="20%">
-
-#VSLIDE
-
-### Moral of the story
-
-- Test data can be tricky |
-- Some scenarios are hard to reproduce |
-- Anything can happen in production |
-
-#HSLIDE
-
 ## What slows us down?
 <img src="assets/challenges.png" width="80%">
 
