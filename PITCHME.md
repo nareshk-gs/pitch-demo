@@ -857,6 +857,7 @@ DELETE https://mockcheckout-test.cfcdcinternaltest.kroger.com/__admin/mappings/3
 
 ![WireMockMobileCheckout](assets/MSL_WireMock.png)
 
+Note: Time out, Various Item validations, 500/400 errors
 #VSLIDE
 
 ## WireMock in Digital
