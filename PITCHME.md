@@ -850,6 +850,8 @@ DELETE https://mockcheckout-test.cfcdcinternaltest.kroger.com/__admin/mappings/3
 
 ![WireMockCheckout](assets/Checkout-Mock.png)
 
+Note: Time out, Master Order Fulfil failure
+
 #VSLIDE
 
 ## WireMock in Digital
