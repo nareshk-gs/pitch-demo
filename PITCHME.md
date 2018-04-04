@@ -872,6 +872,7 @@ Note: Time out, Various Item validations, 500/400 errors
 
 #HSLIDE
 
+## QUESTIONS?
 ![WireMock](assets/Questions.png)
 
 #HSLIDE
@@ -880,4 +881,4 @@ Note: Time out, Various Item validations, 500/400 errors
 ![WireMock](assets/wiremock-logo.png)
 #### http://wiremock.org/
 
-#### “ 'Under testing' is a sin, 'over testing' is a crime ”
+####  'Under testing' is a sin, 'over testing' is a crime 
