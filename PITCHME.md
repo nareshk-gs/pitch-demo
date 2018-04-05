@@ -883,13 +883,16 @@ DELETE https://mockcheckout-test.cfcdcinternaltest.kroger.com/__admin/mappings/3
 
 #VSLIDE
 
-## Java helper library
+### Java helper library
 
 ![WireMockHelper](assets/yaapita_helper.png)
 
 ```
- addDynamicMapping ("\Users\kon7017\File\mappingFile.json", "mockcheckout-test.cfcdcinternaltest.kroger.com");
- deleteDynamicMappings ("2a12532b-299d-4679-aeed-65b755736569, 04ffca91-ff08-9d3f-0706-c0747058d2dd");
+ addDynamicMapping ("\Users\kon7017\File\mappingFile.json", 
+        "mockcheckout-test.cfcdcinternaltest.kroger.com");
+        
+ deleteDynamicMappings ("2a12532b-299d-4679-aeed-65b755736569, 
+        04ffca91-ff08-9d3f-0706-c0747058d2dd");
 ```
 
 #HSLIDE
