@@ -138,27 +138,25 @@ curl http://localhost:8080/coupons/scored/kroger
 {
   "priority": 1,
   "request" : {
-    "urlPattern" : "/click-list-master-order/draft-order/(.*)/getByProfileId",
+    "urlPattern" : "/click-list-store-capacity/reservation/(.*)",
     "method" : "GET",
     "headers": {
       "X-Correlation-Id": {
-        "equalTo": "getdraftorder_byprofile_404"
+        "equalTo": "storecap_getreserve_500"
       }
     }
   },
   "response" : {
-    "status" : 404,
-    "jsonBody" : {
-      "transactionId": "80e2a2cb-8eb0-4e55-9286-e74945442cf8",
-      "correlationId": "2e303fbe-f307-4e6d-b213-9801fee2cc0e",
-      "httpStatus": 404,
-      "appErrorCode": "DraftOrderNotFound",
-      "detail": {
-        "errors": [
-          "Draft Order not found"
-        ],
-        "context": {}
-      }
+    "status" : 500,
+    "bodyFileName" : "body-500.json",
+    "transformers": ["response-template"],
+    "headers" : {
+      "Server" : "nginx",
+      "Content-Type" : "application/json;charset=UTF-8",
+      "Transfer-Encoding" : "chunked",
+      "Connection" : "keep-alive",
+      "Keep-Alive" : "timeout=5",
+      "Transaction-Id" : "46b175ee-e18b-419c-80f5-0c2543201d4f"
     }
   }
 }
