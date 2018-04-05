@@ -1,5 +1,5 @@
 #HSLIDE
-## WIREMOCK 
+## WireMock 
 ### More than just a Stub
 
 
@@ -19,31 +19,40 @@ Naresh Gourishetty (Personalization)
 
 #HSLIDE
 
-## What is WIRE MOCK?
+## What is WireMock?
 
 ### Advanced HTTP API simulator
 
+WireMock is a library for stubbing and mocking web services. It constructs a HTTP server that we could connect to as we would to an actual web service.
+
 
 #VSLIDE
 
-## Why WIRE MOCK?
+## Key Features of  WireMock?
 
-- Test Faults |
-- Test unreproducible cases |
-- 3rd party limitations |
-- Reliable / Faster |
-- Isolate app under development |
+- HTTP response stubbing, matchable on URL, header and body content patterns |
+- Request verification |
+- Runs in unit tests, as a standalone process or as a WAR app |
+- Configurable via a fluent Java API, JSON files and JSON over HTTP |
+- Record/playback of stubs |
+- Fault injection |
+- Per-request conditional proxying |
+- Browser proxying for request inspection and replacement |
+- Stateful behaviour simulation |
+- Configurable response delays |
+
 
 #VSLIDE
 
-## How WIRE MOCK?
+## How WireMock?
 
 ```
 java -jar wiremock-standalone-2.6.0.jar
 ```
 - Just a jar and a bunch of JSONs |
 - That's it! (No Gradle, No Maven, No artifactory) |
-- Optionally use Java |
+- Optionally use Java for more advanced usage or to use as part of junit tests |
+- We are currently using the standalone version due to the flexibilities it offers |
 
 #HSLIDE
 
@@ -60,6 +69,12 @@ java -jar wiremock-standalone-2.6.0.jar
 ```
 
 ![WiremockRecordings](assets/WireMock_Recording.png)
+
+With the recorder on we can send transactions through WireMock to the target API
+
+```
+curl http://localhost:8080/coupons/scored/kroger
+```
 
 #HSLIDE
 
@@ -157,11 +172,14 @@ java -jar wiremock-standalone-2.6.0.jar
 
 #HSLIDE
 
-## Deploy WIRE MOCK
+## Deploy WireMock
+
+Depending on the implementation we can run WireMock from within your Java application, JUnit test, Servlet container or as a standalone process.
+ 
 
 #VSLIDE
 
-## Deploy WIRE MOCK
+## Deploy WireMock
 
 **DockerFile**
 ```
