@@ -693,7 +693,7 @@ Note: 2 different mapping with same Scenario and different state and response
 
 ![WireMockDebugging](assets/WireMock_Logging_Debugging.png)
 
-Note : WireMock records all the traffic going through the server.
+Note: WireMock records all the traffic going through the server.
 
 #VSLIDE
 
@@ -876,6 +876,21 @@ DELETE https://mockcheckout-test.cfcdcinternaltest.kroger.com/__admin/mappings/3
 #### Chrome Extension - Edit Mappings
 
 <img src="assets/WireMockPostman_EditMapping.png" width="40%">
+
+#HSLIDE
+
+## Java helper library
+
+#VSLIDE
+
+## Java helper library
+
+![WireMockHelper](assets/yaapita_helper.png)
+
+```
+ addDynamicMapping ("\Users\kon7017\File\mappingFile.json", "mockcheckout-test.cfcdcinternaltest.kroger.com");
+ deleteDynamicMappings ("2a12532b-299d-4679-aeed-65b755736569, 04ffca91-ff08-9d3f-0706-c0747058d2dd");
+```
 
 #HSLIDE
 
