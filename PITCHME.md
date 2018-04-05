@@ -181,7 +181,7 @@ Depending on the implementation we can run WireMock from within your
 - Java application |
 - JUnit test |
 - Servlet container |
-- or as a standalone process.
+- or as a standalone process. |
  
 
 #VSLIDE
