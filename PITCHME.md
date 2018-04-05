@@ -23,23 +23,24 @@ Naresh Gourishetty (Personalization)
 
 ### Advanced HTTP API simulator
 
-WireMock is a library for stubbing and mocking web services. It constructs a HTTP server that we could connect to as we would to an actual web service.
+<font size=6>
+- WireMock is a library for stubbing and mocking web services. |
+- It constructs a HTTP server that we could connect to as we would to an actual web service. |
 
 
 #VSLIDE
 
-## Key Features of  WireMock?
+## Key Features
 
-- HTTP response stubbing, matchable on URL, header and body content patterns |
-- Request verification |
-- Runs in unit tests, as a standalone process or as a WAR app |
-- Configurable via a fluent Java API, JSON files and JSON over HTTP |
+<font size=6>
+- HTTP response stubbing |
 - Record/playback of stubs |
 - Fault injection |
 - Per-request conditional proxying |
-- Browser proxying for request inspection and replacement |
 - Stateful behaviour simulation |
 - Configurable response delays |
+- Runs in unit tests, as a standalone process or as a WAR app |
+- Configurable via Java API, JSON files and JSON over HTTP |
 
 
 #VSLIDE
