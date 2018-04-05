@@ -757,6 +757,8 @@ https://mockcheckout-test.cfcdcinternaltest.kroger.com/__admin/requests/find
 }
 ```
 
+Note: Many other use cases. Debug why a particular case if failing if you only have a 500. PCI Testing made easy. Instant than ECHO.
+
 #HSLIDE
 
 ## Dynamic Mocking
@@ -824,8 +826,8 @@ DELETE https://mockcheckout-test.cfcdcinternaltest.kroger.com/__admin/mappings/3
 - Stateful Mocking
 - Logging / Debugging
 - Dynamic Mocking
-- Increase in Test Automation coverage 
-- Performance Testing |
+- Performance Testing
+- Increase in Test Automation coverage | 
 
 #HSLIDE
 
@@ -871,13 +873,14 @@ Note: Time out, Master Order Fulfil failure, Fraud
 
 Note: Time out, Various Item validations, 500/400 errors
 
+#VSLIDE
+
 ## WireMock in Digital
 #### Master Order
 
 - CPS Timeouts
 - Instacart
 - Store capacity
-
 
 #VSLIDE
 
