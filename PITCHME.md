@@ -658,6 +658,14 @@ Note: 2 different mapping with same Scenario and different state and response
 
 #HSLIDE
 
+### Performance Testing
+
+- Isolate the system under test by using mocks
+- Introduce latency
+- Save time on environment / data setup
+
+#HSLIDE
+
 ## Admin APIs
 
 #VSLIDE
@@ -806,6 +814,7 @@ DELETE https://mockcheckout-test.cfcdcinternaltest.kroger.com/__admin/mappings/3
 
 #### Use Cases - Recap
 
+<font size=6>
 - Improve Time to Market 
 - Simulating Test Data 
 - Hard to Setup Data 
@@ -815,7 +824,8 @@ DELETE https://mockcheckout-test.cfcdcinternaltest.kroger.com/__admin/mappings/3
 - Stateful Mocking
 - Logging / Debugging
 - Dynamic Mocking
-- Increase in Test Automation coverage |
+- Increase in Test Automation coverage 
+- Performance Testing |
 
 #HSLIDE
 
