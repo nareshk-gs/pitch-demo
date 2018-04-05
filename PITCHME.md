@@ -52,8 +52,7 @@ java -jar wiremock-standalone-2.6.0.jar
 ```
 - Just a jar and a bunch of JSONs |
 - That's it! (No Gradle, No Maven, No artifactory) |
-- Optionally use Java for more advanced usage or to use as part of junit tests |
-- We are currently using the standalone version due to the flexibilities it offers |
+- Optionally use Java |
 
 #HSLIDE
 
@@ -71,7 +70,8 @@ java -jar wiremock-standalone-2.6.0.jar
 
 ![WiremockRecordings](assets/WireMock_Recording.png)
 
-With the recorder on we can send transactions through WireMock to the target API
+<font size=6>
+Send transactions through WireMock to the target API
 
 ```
 curl http://localhost:8080/coupons/scored/kroger
@@ -175,7 +175,13 @@ curl http://localhost:8080/coupons/scored/kroger
 
 ## Deploy WireMock
 
-Depending on the implementation we can run WireMock from within your Java application, JUnit test, Servlet container or as a standalone process.
+<font size=6>
+Depending on the implementation we can run WireMock from within your 
+
+- Java application |
+- JUnit test |
+- Servlet container |
+- or as a standalone process.
  
 
 #VSLIDE
