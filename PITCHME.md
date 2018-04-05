@@ -602,7 +602,7 @@ Note: 2 different mapping with same Scenario and different state and response
 
 ```json
 {
-  "scenarioName": "PriceDecrease",
+  "scenarioName": "PromoExpiration",
   "requiredScenarioState": "Promo",
   "newScenarioState": "Regular",
   "priority": 1,
@@ -628,7 +628,7 @@ Note: 2 different mapping with same Scenario and different state and response
 
 ```json
 {
-  "scenarioName": "PriceDecrease",
+  "scenarioName": "PromoExpiration",
   "requiredScenarioState": "Regular",
   "newScenarioState": "Promo",
   "priority": 1,
@@ -693,12 +693,14 @@ Note: 2 different mapping with same Scenario and different state and response
 
 ![WireMockDebugging](assets/WireMock_Logging_Debugging.png)
 
+Note : WireMock records all the traffic going through the server.
+
 #VSLIDE
 
 #### Logging / Debugging - Sample (Wallet Auth)
 
 ```
-https://mockcheckout-test.cfcdcinternaltest.kroger.com/__admin/requests/find
+POST https://mockcheckout-test.cfcdcinternaltest.kroger.com/__admin/requests/find
 ```
 
 ```json
@@ -772,11 +774,34 @@ Note: Many other use cases. Debug why a particular case if failing if you only h
 - Dynamically add mapping as part of the script |
 - Remove the mapping at end of the script |
 
+Note: For automation testing where correlation ID can't be controlled.
+
 #VSLIDE
 
 ## Dynamic Mocking
 
 ![Dynamic Mapping](assets/TestScript_DynamicMapping.png)
+
+#VSLIDE
+
+## Dynamic Mocking
+
+#### Mapping to be sent to Admin API
+
+```
+{
+  "request" : {
+    "urlPattern" : "/click-list-master-order/draft-order/{{master_order_number}}/fulfill",
+    "method" : "PUT"
+  },
+  "response" : {
+  	"fixedDelayMilliseconds": 5000,
+    "status" : 500,
+    "bodyFileName" : "body-500.json"
+  }
+}
+```
+@[3]({{master_order_number}} will be replaced with the actual master order number created and will be sent to Admin API)
 
 #VSLIDE
 
@@ -794,6 +819,7 @@ POST https://mockcheckout-test.cfcdcinternaltest.kroger.com/__admin/mappings
 ```
 "id": "68c47560-164a-4099-af1e-5fc12f2cc815"
 ```
+
 
 #VSLIDE
 
